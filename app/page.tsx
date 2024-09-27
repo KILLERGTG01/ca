@@ -1,10 +1,14 @@
-import Image from "next/image";
-
+import Navbar from "./components/Navbar/page";
+import Hero from "./components/Hero/page";
 
 export default function Home() {
   return(
-    <div className="">
-
-    </div>
+    <main>
+      <div>
+        <Navbar />
+        <Hero />
+        
+      </div>
+    </main>
   );
 }
