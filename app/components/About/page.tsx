@@ -8,7 +8,7 @@ const About = () => {
           About Us
         </p>
         <p className='text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl mb-4'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Our firm Naresh K Goel & Associates is focused on bringing out lucrative financial solutions for making your business run efficiently.
         </p>
         <button className='bg-[#3868fa] text-white py-2 px-4 rounded hover:bg-[#274bb8] transition duration-300 text-sm sm:text-base md:text-lg'>
           Know More
