@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <div className="fixed top-0 left-0 w-full h-[10vh] backdrop-blur-md bg-white/30 z-50 flex items-center justify-between px-5">
+    <div className="fixed top-0 left-0 w-full h-[16vh] backdrop-blur-md bg-white/30 z-50 flex items-center justify-between px-5">
       <div className="flex-1">
         <button type='button' className="text-left text-lg font-bold" onClick={() => router.push('/')}>
           NARESH K GOEL & ASSOCIATES
