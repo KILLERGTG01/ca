@@ -33,7 +33,8 @@ const About = () => {
   }, []);
 
   return (
-    <div
+      <section id='about'>
+      <div 
       ref={aboutRef}
       className={`relative w-full h-auto bg-[#e6e1e1e0] py-8 sm:py-9 md:py-10 lg:py-19 transition-all duration-700 ease-in-out transform ${
         isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -102,6 +103,7 @@ const About = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

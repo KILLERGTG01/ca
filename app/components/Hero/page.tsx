@@ -31,7 +31,8 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div id="default-carousel" className="relative w-full h-screen" data-carousel="slide">
+    <section id='home'>
+      <div id="default-carousel" className="relative w-full h-screen" data-carousel="slide">
       <div className="relative w-full h-full overflow-hidden">
         {images.map((image, index) => (
           <div
@@ -70,6 +71,7 @@ const Hero: React.FC = () => {
         </span>
       </button>
     </div>
+    </section>
   );
 };
 
