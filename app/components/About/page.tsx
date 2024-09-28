@@ -6,11 +6,9 @@ import Image from 'next/image'
 const About = () => {
   const [isInView, setIsInView] = useState(false);
   const aboutRef = useRef(null);
-  
-  // Full text to be displayed (no typing animation)
+
   const fullText = "Our firm Naresh K Goel & Associates is focused on bringing out lucrative financial solutions for making your business run efficiently.";
   
-  // Using Intersection Observer to detect when the section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -20,7 +18,7 @@ const About = () => {
           setIsInView(false);
         }
       },
-      { threshold: 0.3 } // When 30% of the About section is visible, trigger the animation
+      { threshold: 0.3 }  
     );
 
     if (aboutRef.current) {
@@ -50,7 +48,7 @@ const About = () => {
           ABOUT US
         </p>
 
-        {/* Display full text normally (without typing animation) */}
+        
         <p
           className={`text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl mb-8 transition-opacity duration-700 delay-100 ease-in-out ${
             isInView ? 'opacity-100' : 'opacity-0'
@@ -59,7 +57,7 @@ const About = () => {
           {fullText}
         </p>
 
-        {/* New content layout with image and description */}
+        
         <div
           className={`flex flex-col items-center bg-white/30 text-black rounded-lg shadow-lg p-6 max-w-xl mx-auto backdrop-blur-md transition-all duration-700 delay-200 ease-in-out ${
             isInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -71,7 +69,7 @@ const About = () => {
               alt='About Us Image'
               width={120}
               height={120}
-              className='rounded-full border-4 border-white transition-transform duration-700 ease-in-out'
+              className='rounded-full border-4 border-black transition-transform duration-700 ease-in-out'
               style={{
                 transform: isInView ? 'scale(1)' : 'scale(0.8)',
               }}
