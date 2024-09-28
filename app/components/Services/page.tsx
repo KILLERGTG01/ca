@@ -9,7 +9,7 @@ import pic5 from '@/app/assets/Hero/pic5.svg';
 
 const Services = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false); // State to pause the auto-slide
+  const [paused, setPaused] = useState(false); 
   const aboutRef = useRef(null);
 
   const cards = [
@@ -20,29 +20,28 @@ const Services = () => {
     { src: pic5, title: 'NARESH KUMAR GOEL', description: 'B.Com(H), ACA, FCS, FCMA, L.L.B' }
   ];
 
-  // Carousel auto-slide functionality
   useEffect(() => {
     if (!paused) {
       const interval = setInterval(() => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
-      }, 4000); // Slide every 4 seconds
+      }, 4000); 
 
       return () => clearInterval(interval);
     }
   }, [cards.length, paused]);
 
-  // Function to move to the next slide
+
   const nextSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % cards.length);
     setPaused(true);
-    setTimeout(() => setPaused(false), 5000); // Pause for 5 seconds after manual action
+    setTimeout(() => setPaused(false), 5000); 
   };
 
-  // Function to move to the previous slide
+
   const prevSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
     setPaused(true);
-    setTimeout(() => setPaused(false), 5000); // Pause for 5 seconds after manual action
+    setTimeout(() => setPaused(false), 5000); 
   };
 
   return (
@@ -54,13 +53,13 @@ const Services = () => {
           OUR SERVICES
         </p>
 
-        {/* Horizontal Carousel */}  
+        
         <div className="relative flex justify-center items-center overflow-hidden">
           <div
             className="relative flex items-center transition-transform duration-700 ease-in-out"
             style={{
-              transform: `translateX(-${activeIndex * (100 / 3)}%)`, // Shift based on active index
-              width: `${cards.length * (100 / 3)}%`, // Set total width to fit 3 cards at a time
+              transform: `translateX(-${activeIndex * (100 / 3)}%)`, 
+              width: `${cards.length * (100 / 3)}%`, 
             }}
           >
             {cards.map((card, index) => {
@@ -80,7 +79,7 @@ const Services = () => {
                         width={120}
                         height={120}
                         className="rounded-full border-4 border-black transition-transform duration-700 ease-in-out"
-                        priority={index === 0} // Only preload the first image for performance
+                        priority={index === 0} 
                       />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
@@ -98,7 +97,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Manual Controls */}
         <div className="absolute top-1/2 transform -translate-y-1/2 left-5 z-20">
           <button
             onClick={prevSlide}
