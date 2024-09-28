@@ -7,22 +7,21 @@ import pic3 from '@/app/assets/Hero/pic3.svg';
 import pic4 from '@/app/assets/Hero/pic4.svg';
 import pic5 from '@/app/assets/Hero/pic5.svg';
 
-// Type definition for the Hero component
+
 const Hero: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [pic1, pic2, pic3, pic4, pic5];
 
-  // Automatically move to the next slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change slide every 3 seconds
+    }, 3000); 
 
-    // Cleanup interval on component unmount
+    
     return () => clearInterval(interval);
   }, [images.length]);
 
-  // Handler for manually navigating to the previous and next slides
+  
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -46,13 +45,12 @@ const Hero: React.FC = () => {
               className="absolute block w-full h-full object-cover"
               alt={`Slide ${index + 1}`}
               
-              priority={currentIndex === index} // Ensures the current image is loaded with priority
+              priority={currentIndex === index} 
             />
           </div>
         ))}
       </div>
 
-      {/* Carousel Controls for manual navigation */}
       <button
         type="button"
         className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
