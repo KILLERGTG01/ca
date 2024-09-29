@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
-import logo from '@/app/assets/logo/logo.svg'
+//import Image from 'next/image'
+//import logo from '@/app/assets/logo/logo.svg'
 
 const Navbar: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
