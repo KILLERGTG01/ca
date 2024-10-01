@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 w-full h-[16vh] backdrop-blur-md bg-white/30 z-50 flex items-center justify-between px-5"
+      className="fixed top-0 left-0 w-full h-[12vh] backdrop-blur-md bg-white/30 z-50 flex items-center justify-between px-5"
     >
       <div className="flex-1">
         <button type='button' className="text-left text-lg font-bold" onClick={() => scrollToSection('home')}>

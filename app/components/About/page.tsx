@@ -33,10 +33,10 @@ const About = () => {
   }, []);
 
   return (
-      <section id='about'>
+      <section id='about' className='scroll-mt-[16vh]'>
       <div 
       ref={aboutRef}
-      className={`relative w-full h-auto bg-[#e6e1e1e0] py-8 sm:py-9 md:py-10 lg:py-19 scroll-mt-20 transition-all duration-700 ease-in-out transform ${
+      className={`relative w-full h-auto bg-[#e6e1e1e0] py-8 sm:py-9 md:py-10 lg:py-19 transition-all duration-700 ease-in-out transform ${
         isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >

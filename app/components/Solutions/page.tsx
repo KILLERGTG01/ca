@@ -65,14 +65,14 @@ const Solutions = () => {
   };
 
   return (
-    <section id='solutions'>
+    <section id='solutions' className='scroll-mt-[16vh]'>
       <div ref={aboutRef}
-      className={`relative w-full h-auto bg-[#e6e1e1e0] py-8 sm:py-9 md:py-10 lg:py-19 scroll-mt-20 transition-all duration-700 ease-in-out transform ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      className={`relative w-full h-auto bg-[#e6e1e1e0] py-8 sm:py-9 md:py-10 lg:py-19 transition-all duration-700 ease-in-out transform ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
     >
       <div className="text-center px-4 py-4">
         <p
-          className={`text-black font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2 transition-opacity duration-700 ease-in-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          className={`text-black font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2  transition-opacity duration-700 ease-in-out ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
         >
           OUR SOLUTIONS
