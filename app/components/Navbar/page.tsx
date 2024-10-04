@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
 
       <div className="hidden md:block">
         <div className="flex-1 flex justify-center space-x-10 whitespace-nowrap">
-          {['home', 'about', 'solutions', 'services', 'contact'].map((section, index) => (
+          {['home', 'about', 'solutions', 'services', 'contact'].map((section) => (
             <motion.button
               key={section}
               type='button'
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
               variants={buttonVariants}
               initial="initial"
               animate="animate"
-              transition={{ delay: 0.1 * (index + 1) }}
+              transition={{ delay: 0.1 }}
             >
               {section.toUpperCase().replace('_', ' ')}
             </motion.button>
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
             style={{ borderTop: '2px solid black' }}
           >
             <div className="flex flex-col items-center space-y-5 p-5">
-              {['home', 'about', 'solutions', 'services', 'contact'].map((section, index) => (
+              {['home', 'about', 'solutions', 'services', 'contact'].map((section) => (
                 <button
                   key={section}
                   type='button'
